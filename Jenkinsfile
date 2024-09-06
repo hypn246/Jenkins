@@ -2,7 +2,7 @@ pipeline{
     agent {
         docker true
     }
-    stage('Build'){
+    stage ('Build'){
         sh 'python3 --version'
     }
     stage ('Clean-up'){
