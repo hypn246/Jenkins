@@ -2,11 +2,13 @@ pipeline{
     agent {
         docker true
     }
-    stage ('Build'){
-        sh 'python3 --version'
+    stages ('Build'){
+        steps {
+            sh 'python3 --version'
+        }
     }
-    stage ('Clean-up'){
-        step{
+    stages ('Clean-up'){
+        steps {
             sh 'docker system prune -a --volumes'
         }
     }
