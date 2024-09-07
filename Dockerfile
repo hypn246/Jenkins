@@ -10,4 +10,4 @@ WORKDIR /app
 # Copy your application code to the container
 COPY . /app
 
-CMD ["python3", "app/app.py"]
+CMD ["python3", "app/app.py","sudo","service","docker","start"]
