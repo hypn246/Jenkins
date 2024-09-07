@@ -10,7 +10,7 @@ pipeline{
         }
         stage ('Clean-up') {
             steps {
-                sh 'docker system prune -a --volumes'
+                sh 'docker system prune'
             }
         }
     }
