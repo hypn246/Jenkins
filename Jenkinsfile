@@ -10,7 +10,11 @@ pipeline{
         }
         stage ('Clean-up') {
             steps {
-                sh 'docker system prune'
+                sh '''
+                    echo "Cleaning up Docker images and containers..."
+                    docker system prune -af
+                    docker volume prune -f
+                '''
             }
         }
     }
