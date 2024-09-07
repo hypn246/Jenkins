@@ -6,8 +6,8 @@ pipeline{
         stage ('Build') {
             steps {
                 sh 'python3 --version'
-                sh 'docker --version'
             }
         }
+    // hinh nhu jenkins auto clear cache + imagess cho
     }
 }
